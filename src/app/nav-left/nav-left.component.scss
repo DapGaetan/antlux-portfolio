@@ -1,0 +1,37 @@
+// Variable
+$primary-color: #AC86B4;
+$secondary-color: #C9A7D0;
+$white: #F5F5F5;
+$shadow: #00000040;
+$sa-st-background: #297D83;
+
+// Font
+// .league-spartan-<uniquifier> {
+//     font-family: "League Spartan", serif;
+//     font-optical-sizing: auto;
+//     font-weight: <weight>;
+//     font-style: normal;
+//   }
+
+.NavLeft{
+    max-width: 240px;
+    max-height: 2910px;
+    min-height: 100vh;
+    background-color: $primary-color;
+    
+    .NavTitle{
+
+    }
+
+    .NavItems{
+
+    }
+    .NavItem{
+
+    }
+}
+footer{
+    max-width: 240px;
+    background-color: $primary-color;
+    height: auto;
+}
