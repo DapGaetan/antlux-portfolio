@@ -25,10 +25,12 @@ $sa-st-background: #297D83;
         display: flex;
         list-style: none;
         padding-left: 12%;
+
     }
 
     .NavItem{
-
+        padding-left: 10px;
+        padding-top: 65px;
         a{
             color: $secondary-color;
             text-decoration: none;

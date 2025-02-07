@@ -95,12 +95,12 @@ $sa-st-background: #297D83;
         }
     }
     .NavLeftFooter {
-        width: 100%;  // Assure que le footer prend toute la largeur
-        height: 10.7vw; // Ajuste selon ton design (mets la valeur souhaitée)
+        width: 100%;
+        height: 10.7vw;
         background-image: url('../../assets/textures/menufooter.svg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
-        margin-top: auto; // Pousse le footer vers le bas de `.NavLeft`
+        margin-top: auto;
     }
 }
