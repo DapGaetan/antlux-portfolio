@@ -1,11 +1,13 @@
-<nav class="NavLeft">
+<nav class="NavLeft" [class.is-open]="isMenuOpen">
     <div class="NavAction">
         <h2 class="NavTitle">Catégories</h2>
-        <button class="Burger"><img src="assets/icon/cross.svg" alt=""></button>
+        <button class="Burger" (click)="toggleMenu()">
+            <img [src]="isMenuOpen ? 'assets/icon/menucross.svg' : 'assets/icon/menubars.svg'" alt="Ouvrir ou fermer le menu avec l'icone croix ou barre">
+          </button>          
     </div>
 
     <hr>
-    
+
     <ul class="NavItems">
         <li class="NavItem"><a href="#">À propos de moi</a></li>
         <li class="NavItem"><a href="#">Mes réalisations</a></li>

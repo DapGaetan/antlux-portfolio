@@ -14,6 +14,7 @@ $sa-st-background: #297D83;
 //   }
 
 .NavLeft{
+    top: 0;
     position: sticky;
     width: 10%;
     height: 100vh;
@@ -21,6 +22,12 @@ $sa-st-background: #297D83;
     border-top-right-radius: 15px;
     padding-top: 5px;
     box-shadow: 1px 1px $shadow;
+
+    transition: transform 0.3s ease-in-out;
+    &.is-open {
+        transform: translateX(-80%);
+    }
+    
 
     .NavAction {
         display: flex;
@@ -48,7 +55,10 @@ $sa-st-background: #297D83;
             padding-top: 5px;
 
             img {
-                
+                bottom: 0;
+                width: 1vw;
+                height: 1vw;
+                padding: 1px;
             }
         }
     }
@@ -59,7 +69,9 @@ $sa-st-background: #297D83;
     }
 
     .NavItems{
-        padding-left: 5px;
+        padding-left: 10px;
+        padding-top: 5px;
+        list-style: none;
     }
 
     .NavItem{
@@ -78,8 +90,9 @@ $sa-st-background: #297D83;
         }
     }
 
-    .NavLeftFooter{
-        object-fit: fill;
-        bottom: 0;
+    .NavLeftFooter {
+        object-fit: contain;
+        width: 100%;
+        margin-top: auto; /* Pousse l'élément tout en bas */
     }
 }

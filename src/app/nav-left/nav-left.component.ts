@@ -7,5 +7,10 @@ import { Component } from '@angular/core';
   styleUrl: './nav-left.component.scss'
 })
 export class NavLeftComponent {
+  isMenuOpen = false;
 
+  
+  toggleMenu(): void {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
 }
