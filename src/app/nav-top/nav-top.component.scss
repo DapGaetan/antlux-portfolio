@@ -12,15 +12,27 @@ $sa-st-background: #297D83;
 //     font-weight: <weight>;
 //     font-style: normal;
 //   }
-
-.ProfilePicture{
-    width: 80px;
-    height: auto;
-}
-
-.NavTop{
-    position: sticky;
-    width: calc(100% - 80px);
+.NavTop {
+    top: 0;
+    position: absolute;
+    width: 100%;
     background-color: $primary-color;
-    box-shadow: 1px 1px $shadow;
-}
+    box-shadow: 5px 5px $secondary-color;
+    height: 50px;
+    }
+
+    .NavItems {
+        display: flex;
+        list-style: none;
+        padding-left: 12%;
+    }
+
+    .NavItem{
+
+        a{
+            color: $secondary-color;
+            text-decoration: none;
+            font-size: 0.7vw;
+            font-weight: 700;
+        }
+    }

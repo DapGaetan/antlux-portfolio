@@ -26,10 +26,10 @@ $sa-st-background: #297D83;
     border-top-right-radius: 15px;
     padding-top: 5px;
     box-shadow: 1px 1px $shadow;
+    
     transition: transform 0.3s ease-in-out;
-
     &.is-open {
-        transform: translateX(-80%);
+        transform: translateX(-7.7vw);
     }
     
 
@@ -38,7 +38,7 @@ $sa-st-background: #297D83;
         align-items: center;
         vertical-align: middle;
         justify-content: space-between;
-        padding: 0 15px;
+        padding: 0 0.7vw;
         margin-bottom: 5px;
     
 
@@ -84,8 +84,8 @@ $sa-st-background: #297D83;
         background-repeat: no-repeat;
         background-size: contain;
         background-position: left;
-        background-size: 70%;
-        padding: 15px;
+        background-size: 7vw;
+        padding: 0.6vw;
 
         a{
             color: $secondary-color;
@@ -95,8 +95,12 @@ $sa-st-background: #297D83;
         }
     }
     .NavLeftFooter {
-        width: 100%;
-        margin-top: auto;
-        display: block;
+        width: 100%;  // Assure que le footer prend toute la largeur
+        height: 10.7vw; // Ajuste selon ton design (mets la valeur souhaitée)
+        background-image: url('../../assets/textures/menufooter.svg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-top: auto; // Pousse le footer vers le bas de `.NavLeft`
     }
 }
