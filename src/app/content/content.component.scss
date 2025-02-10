@@ -1,0 +1,141 @@
+// Variables
+$primary-color: #C9A7D0;
+$secondary-color: #AC86B4;
+$white: #F5F5F5;
+$shadow: #00000040;
+$sa-st-background: #297D83;
+
+.main {
+    display: flex;
+    flex-direction: row;
+    transition: all 0.3s ease-in-out;
+
+    .NavLeft {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: stretch;
+        top: 0;
+        position: sticky;
+        width: 240px;
+        height: 100vh;
+        background-color: $primary-color;
+        border-top-right-radius: 15px;
+        padding-top: 5px;
+        box-shadow: 4px 10px 5px $shadow;
+        z-index: 1000;
+        flex-shrink: 0;
+        transition: width 0.3s ease-in-out; 
+
+
+        &.is-open {
+            width: 60px;
+        }
+
+        .NavAction {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 15px;
+            margin-bottom: 5px;
+        
+            .NavTitle {
+                font-size: 24px;
+                font-weight: 800;
+                color: $white;
+                text-shadow: 0px 3px $shadow;
+                flex-grow: 1;
+                text-align: center;
+                transition: opacity 0.3s ease-in-out;
+                
+                &.is-open {
+                    display: none;
+                }
+            }
+
+            .Burger {
+                border: none;
+                background: none;
+                flex-shrink: 0;
+                padding-top: 5px;
+                
+                img {
+                    width: 27.55px;
+                    height: 27.55px;
+                    padding: 2px;
+                }
+            }
+        }
+
+        hr {
+            margin: auto;
+            width: 95%;
+            border-top: 1px solid $white;
+
+            &.is-open {
+                width: 80%;
+
+            }
+
+        }
+
+        .NavItems {
+            flex-grow: 1;
+            padding-left: 5px;
+            padding-top: 5px;
+            list-style: none;
+            transition:  1s ease-in-out;
+
+            &.is-open {
+                visibility: hidden;
+                transition: opacity 1s ease-in-out;
+
+            }
+        }
+
+        .NavItem {
+            background-image: url('../../assets/textures/libg.svg');
+            background-repeat: no-repeat;
+            background-size: 187px;
+            background-position: left;
+            padding: 16px;
+
+            a {
+                color: $secondary-color;
+                text-decoration: none;
+                font-size: 16px;
+                font-weight: 700;
+            }
+        }
+
+        .NavLeftFooter {
+            max-width: 248px;
+            height: 200px;
+            background-image: url('../../assets/textures/menufooter.svg');
+            background-size: 240px;
+            background-position: center;
+            background-repeat: no-repeat;
+            margin-top: auto;
+            transition: width 0.3s ease-in-out;
+            transition: width 0.3s ease-in; 
+
+            &.is-open {
+                width: 60px;
+            }
+        }
+    }
+
+    .content {
+        transition: margin-left 0.3s ease-in-out;
+        margin-left: 50px;
+    
+        .is-open & { 
+            margin-left: 50px;
+        }
+
+        .AboutMe{
+            margin-top: 128px;
+
+        }
+    }
+}
