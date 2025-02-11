@@ -10,6 +10,8 @@ $sa-st-background: #297D83;
     flex-direction: row;
     transition: all 0.3s ease-in-out;
 
+    // Navigation Left
+
     .NavLeft {
         display: flex;
         flex-direction: column;
@@ -174,6 +176,10 @@ $sa-st-background: #297D83;
         }
     }
 
+    // End Of Navigation Left
+    
+    // Content
+
     .content {
         transition: margin-left 0.3s ease-in-out;
         margin-left: 0;
@@ -192,18 +198,30 @@ $sa-st-background: #297D83;
             max-width: 1330px;
             max-height: 355px;
             background-color: $primary-color;
-            border-top-right-radius: 25%;
-            border-bottom-right-radius: 25%;
+            border-top-right-radius: 10%;
+            border-bottom-right-radius: 10%;
+            box-shadow: 0px 8px $secondary-color;
+            padding: 60px;
             .About{
                 display: flex;
                 flex-direction: row;
+
                 
                 img{
                     width: 100%;
                     height: auto;
                 }
+
+                h2{
+                    color: $white;
+                    font-size: 32px;
+                    font-weight: 800;
+                    user-select: none;
+                }
             }
         }
     }
+
+    // End Of Content
 }
 
