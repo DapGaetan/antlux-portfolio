@@ -8,10 +8,10 @@ import { FooterComponent } from '../footer/footer.component';
   styleUrl: './content.component.scss'
 })
 export class ContentComponent {
-  isMenuOpen = false;
+  isMenuClose = false;
 
   
   toggleMenu(): void {
-    this.isMenuOpen = !this.isMenuOpen;
+    this.isMenuClose = !this.isMenuClose;
   }
 }

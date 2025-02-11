@@ -1,24 +1,24 @@
 <div class="main">
-    <nav class="NavLeft" [class.is-open]="isMenuOpen">
-        <div class="NavAction" [class.is-open]="isMenuOpen">
-            <h2 class="NavTitle" [class.is-open]="isMenuOpen">Catégories</h2>
+    <nav class="NavLeft" [class.is-close]="isMenuClose">
+        <div class="NavAction" [class.is-close]="isMenuClose">
+            <h2 class="NavTitle" [class.is-close]="isMenuClose">Catégories</h2>
             <button class="Burger" (click)="toggleMenu()">
-                <img [src]="isMenuOpen ? 'assets/icon/menubars.svg' : 'assets/icon/menucross.svg'" alt="Ouvrir ou fermer le menu avec l'icone croix ou barre">
+                <img [src]="isMenuClose ? 'assets/icon/menubars.svg' : 'assets/icon/menucross.svg'" alt="Ouvrir ou fermer le menu avec l'icone croix ou barre">
               </button>          
         </div>
-        <hr [class.is-open]="isMenuOpen">
-        <ul class="NavItems" [class.is-open]="isMenuOpen">
-            <li class="NavItem"><a href="#">À propos de moi</a></li>
-            <li class="NavItem"><a href="#">Mes réalisations</a></li>
-            <li class="NavItem"><a href="#">Mes compétences</a></li>
-            <li class="NavItem"><a href="#">Mon parcours</a></li>
+        <hr [class.is-close]="isMenuClose">
+        <ul class="NavItems" [class.is-close]="isMenuClose">
+            <li class="NavItem" [class.is-close]="isMenuClose"><a href="#" [class.is-close]="isMenuClose">À propos de moi</a></li>
+            <li class="NavItem" [class.is-close]="isMenuClose"><a href="#" [class.is-close]="isMenuClose">Mes réalisations</a></li>
+            <li class="NavItem" [class.is-close]="isMenuClose"><a href="#" [class.is-close]="isMenuClose">Mes compétences</a></li>
+            <li class="NavItem" [class.is-close]="isMenuClose"><a href="#" [class.is-close]="isMenuClose">Mon parcours</a></li>
         </ul>
     
-        <div class="NavLeftFooter" [class.is-open]="isMenuOpen">
+        <div class="NavLeftFooter" [class.is-close]="isMenuClose">
     
         </div>
     </nav>
-        <div class="content" [class.is-open]="isMenuOpen">
+        <div class="content" [class.is-close]="isMenuClose">
             <div class="AboutMe">
                 <h1><img src="assets/images/h1.svg" alt="Antoine Luciani (Antlux)"> </h1>
                 <div class="About">

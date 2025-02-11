@@ -25,19 +25,28 @@ $sa-st-background: #297D83;
         box-shadow: 4px 10px 5px $shadow;
         z-index: 1000;
         flex-shrink: 0;
-        transition: width 0.3s ease-in-out; 
+        transition: width 0s ease-in-out;
 
-
-        &.is-open {
+        &.NavLeft::after {
             width: 60px;
+            transition: width 0.3s ease-in-out;
         }
 
+        &.is-close {
+            width: 60px;
+            transition: width 0.3s ease-in-out;
+        }
+        
         .NavAction {
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 0 15px;
             margin-bottom: 5px;
+
+            &.is-close {
+                padding: 0 15px;
+            }
         
             .NavTitle {
                 font-size: 24px;
@@ -46,11 +55,15 @@ $sa-st-background: #297D83;
                 text-shadow: 0px 3px $shadow;
                 flex-grow: 1;
                 text-align: center;
-                transition: opacity 0.3s ease-in-out;
-                
-                &.is-open {
+                opacity: 1;
+                transition: transform 1s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 0.3s ease-in-out;
+        
+                &.is-close {
+                    transform: translateX(-100%);
                     display: none;
+                    pointer-events: none;
                 }
+            
             }
 
             .Burger {
@@ -64,6 +77,7 @@ $sa-st-background: #297D83;
                     height: 27.55px;
                     padding: 2px;
                 }
+
             }
         }
 
@@ -72,7 +86,7 @@ $sa-st-background: #297D83;
             width: 95%;
             border-top: 1px solid $white;
 
-            &.is-open {
+            &.is-close {
                 width: 80%;
 
             }
@@ -84,12 +98,13 @@ $sa-st-background: #297D83;
             padding-left: 5px;
             padding-top: 5px;
             list-style: none;
-            transition:  1s ease-in-out;
-
-            &.is-open {
-                visibility: hidden;
-                transition: opacity 1s ease-in-out;
-
+            overflow: hidden;
+            transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 0.3s ease-in-out;
+        
+            &.is-close {
+                transform: translateX(-100%);
+                opacity: 0;
+                pointer-events: none;
             }
         }
 
@@ -99,12 +114,23 @@ $sa-st-background: #297D83;
             background-size: 187px;
             background-position: left;
             padding: 16px;
+            transition: transform 0.6s ease-in-out, opacity 0s ease-in-out;
+
+            .is-close .NavItem:nth-child(1) { transition-delay: 0.6s; }
+            .is-close .NavItem:nth-child(2) { transition-delay: 1s; }
+            .is-close .NavItem:nth-child(3) { transition-delay: 1.3s; }
+            .is-close .NavItem:nth-child(4) { transition-delay: 1.8s; }
 
             a {
                 color: $secondary-color;
                 text-decoration: none;
                 font-size: 16px;
                 font-weight: 700;
+                transition: width 0.3s ease-in-out;
+
+                &.is-close {
+                    transition:  visibility hidden 0.6s ease-in-out, opacity 0s ease-in-out;
+                }
             }
         }
 
@@ -116,11 +142,16 @@ $sa-st-background: #297D83;
             background-position: center;
             background-repeat: no-repeat;
             margin-top: auto;
-            transition: width 0.3s ease-in-out;
-            transition: width 0.3s ease-in; 
-
-            &.is-open {
+            transition: width 1.5s ease-in-out;
+        
+            &.NavLeftFooter::after {
                 width: 60px;
+                transition: width 0.3s ease-in-out;
+            }
+    
+            &.is-close {
+                width: 100%;
+                transition: width 0.3s ease-in-out;
             }
         }
     }
@@ -129,13 +160,16 @@ $sa-st-background: #297D83;
         transition: margin-left 0.3s ease-in-out;
         margin-left: 50px;
     
-        .is-open & { 
+        .is-close & {
             margin-left: 50px;
         }
 
+    
+
         .AboutMe{
-            margin-top: 128px;
+            margin-top: 85px;
 
         }
     }
 }
+
