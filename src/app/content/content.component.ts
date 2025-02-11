@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { MenuService } from '../services/menu.service';
 import { FooterComponent } from '../footer/footer.component';
 
 @Component({
@@ -10,8 +11,14 @@ import { FooterComponent } from '../footer/footer.component';
 export class ContentComponent {
   isMenuClose = false;
 
-  
+  constructor(private menuService: MenuService) {
+    // Écoute les changements du menu
+    this.menuService.isMenuClose$.subscribe(state => {
+      this.isMenuClose = state;
+    });
+  }
+
   toggleMenu(): void {
-    this.isMenuClose = !this.isMenuClose;
+    this.menuService.toggleMenu();
   }
 }

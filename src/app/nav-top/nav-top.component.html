@@ -1,9 +1,9 @@
-<nav class="NavTop">
-    <ul class="NavItems">
-        <li class="Circle"><img src="assets/images/profile/littleprofilepicture.svg" alt="Photo de profil d'Antoine luciani" class="ProfilePicture"></li>
-        <li class="NavItem"><a href="#"><img src="assets/icon/github.svg" alt="Icone de réseaux sociale professionnel : GitHub"></a></li>
-        <li class="NavItem"><a href="#"><img src="assets/icon/twitter.svg" alt="Icone de réseaux sociale professionnel : X (Anciennement Twitter)"></a></li>
-        <li class="NavItem"><a href="#"><img src="assets/icon/linkedin.svg" alt="Icone de réseaux sociale professionnel : Linkedin"></a></li>
-        <li class="NavItem"><a href="#"><img src="assets/icon/itchio.svg" alt="Icone de réseaux sociale professionnel : ItchIO"></a></li>
+<nav class="NavTop" [class.is-close]="isMenuClose">
+    <ul class="NavItems" [class.is-close]="isMenuClose">
+        <li class="Circle" [class.is-close]="isMenuClose"><img src="assets/images/profile/littleprofilepicture.svg" alt="Photo de profil d'Antoine luciani" class="ProfilePicture"></li>
+        <li class="NavItem" [class.is-close]="isMenuClose"><a href="#"><img src="assets/icon/github.svg" alt="Icone de réseaux sociale professionnel : GitHub"></a></li>
+        <li class="NavItem" [class.is-close]="isMenuClose"><a href="#"><img src="assets/icon/twitter.svg" alt="Icone de réseaux sociale professionnel : X (Anciennement Twitter)"></a></li>
+        <li class="NavItem" [class.is-close]="isMenuClose"><a href="#"><img src="assets/icon/linkedin.svg" alt="Icone de réseaux sociale professionnel : Linkedin"></a></li>
+        <li class="NavItem" [class.is-close]="isMenuClose"><a href="#"><img src="assets/icon/itchio.svg" alt="Icone de réseaux sociale professionnel : ItchIO"></a></li>
     </ul>
 </nav>
