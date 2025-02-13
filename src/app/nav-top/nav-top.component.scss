@@ -5,15 +5,6 @@ $white: #F5F5F5;
 $shadow: #00000040;
 $sa-st-background: #297D83;
 
-// Font
-// .league-spartan-<uniquifier> {
-//     font-family: "League Spartan", serif;
-//     font-optical-sizing: auto;
-//     font-weight: <weight>;
-//     font-style: normal;
-//   }
-
-
 .NavTop {
     position: sticky;
     top: 0;
@@ -26,16 +17,17 @@ $sa-st-background: #297D83;
     .NavItems {
         display: flex;
         list-style: none;
-        margin-left: 12%;
+        margin-left: 260px;
         transition: margin-left 0s ease-in-out;
 
+
         &.is-close {
-            margin-left: 5%;
+             margin-left: 80px;
             transition: margin-left 1s ease-in-out;
         }
 
         .Circle{
-            width: 100px;
+            width: clamp(80px, 100px, 100px);
             height: 100px;
             top: 0px;
             border-radius: 100%;
@@ -50,16 +42,10 @@ $sa-st-background: #297D83;
 
     .NavItem {
         position: relative;
-        padding-left: 10px;
+        padding-left: 0.6%;
         padding-top: 65px;
+        width: clamp(25px, 2em, 35px);
 
-        a {
-            color: $secondary-color;
-            text-decoration: none;
-            font-size: 0.7vw;
-            font-weight: 700;
-        }
-        
         img {
             filter: drop-shadow(0px 4px 0px $primary-color);
             transition: filter 0s ease;

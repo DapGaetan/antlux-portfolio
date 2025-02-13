@@ -13,23 +13,24 @@ $sa-st-background: #297D83;
     // Navigation Left
 
     .NavLeft {
-        display: flex;
-        flex-direction: column;
         justify-content: space-between;
         align-items: stretch;
-        top: 0;
-        position: sticky;
-        width: 240px;
-        height: 100vh;
-        background-color: $primary-color;
+        width: clamp(240px, 15vw, 240px);
         border-top-right-radius: 15px;
         padding-top: 5px;
+        transition: width 0s ease-in-out;
+        display: flex;
+        flex-direction: column;
+        position: sticky;
+        top: 0px;
+        left: 0;
+        height: 100vh;
+        background-color: $primary-color;
         box-shadow: 4px 10px 5px $shadow;
         z-index: 1000;
         flex-shrink: 0;
-        transition: width 0s ease-in-out;
 
-        &.NavLeft::after {
+        .NavLeft::after {
             width: 60px;
             transition: width 0.3s ease-in-out;
         }
@@ -51,14 +52,13 @@ $sa-st-background: #297D83;
             }
         
             .NavTitle {
-                font-size: 24px;
+                font-size: clamp(1rem, 1.5vw, 1.5rem);
                 font-weight: 800;
                 color: $white;
                 text-shadow: 0px 3px $shadow;
                 flex-grow: 1;
                 text-align: center;
-                opacity: 1;
-                transition: transform 1s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 0.3s ease-in-out;
+                transition: opacity 0.3s ease-in-out;
         
                 &.is-close {
                     transform: translateX(-100%);
@@ -73,10 +73,10 @@ $sa-st-background: #297D83;
                 background: none;
                 flex-shrink: 0;
                 padding-top: 5px;
-                
+
                 img {
-                    width: 27.55px;
-                    height: 27.55px;
+                    width: clamp(24px, 2vw, 28px);
+                    height: clamp(24px, 2vw, 28px);
                     padding: 2px;
                 }
 
@@ -111,12 +111,9 @@ $sa-st-background: #297D83;
         }
 
         .NavItem {
-            transition: transform 0.6s ease-in-out, opacity 0s ease-in-out;
         
-            .is-close .NavItem:nth-child(1) { transition-delay: 0.6s; }
-            .is-close .NavItem:nth-child(2) { transition-delay: 1s; }
-            .is-close .NavItem:nth-child(3) { transition-delay: 1.3s; }
-            .is-close .NavItem:nth-child(4) { transition-delay: 1.8s; }
+
+            
         
             a {
                 display: block;
@@ -128,11 +125,10 @@ $sa-st-background: #297D83;
                 background-position: left;
                 color: $secondary-color;
                 text-decoration: none;
-                font-size: 16px;
+                font-size: clamp(0.8rem, 0.8vw, 1rem);
                 font-weight: 700;
                 padding: 16px;
                 transition: width 0.3s ease-in-out;
-
                 user-select: none;
 
                 &:hover {
@@ -147,7 +143,9 @@ $sa-st-background: #297D83;
                 }
         
                 &.is-close {
-                    transition: visibility hidden 0.6s ease-in-out, opacity 0s ease-in-out;
+                    opacity: 0;
+                    visibility: hidden;
+                    transition: opacity 0.3s ease-in-out, visibility 0s linear 0.3s;
                 }
     
             }
@@ -155,19 +153,18 @@ $sa-st-background: #297D83;
         
 
         .NavLeftFooter {
-            max-width: 248px;
+            width: clamp(245px, 15vw, 240px);
             height: 200px;
             background-image: url('../../assets/textures/menufooter.svg');
-            background-size: 240px;
+            background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            margin-top: auto;
-            transition: width 1.5s ease-in-out;
+            transition: width 0.3s ease-in-out;
         
-            &.NavLeftFooter::after {
+            .NavLeftFooter::after {
                 width: 60px;
                 transition: width 0.3s ease-in-out;
-            }
+            }            
     
             &.is-close {
                 width: 100%;
@@ -183,45 +180,68 @@ $sa-st-background: #297D83;
     .content {
         transition: margin-left 0.3s ease-in-out;
         margin-left: 0;
-    
-        .is-close & {
-            margin-left: 50px;
-        }
 
         h1{
             margin-top: 85px;
+            margin-left: 30px;
         }
 
         .AboutMe{
-            padding: 0;
             margin: 0;
-            max-width: 1330px;
-            max-height: 355px;
+            max-width: fit-content;
+            max-height: fit-content;
             background-color: $primary-color;
-            border-top-right-radius: 10%;
-            border-bottom-right-radius: 10%;
+            border-top-right-radius: 255px;
+            border-bottom-right-radius: 255px;
             box-shadow: 0px 8px $secondary-color;
-            padding: 60px;
+            padding: 40px;
             .About{
                 display: flex;
                 flex-direction: row;
 
-                
-                img{
+                img {
+                    max-width: 256px;
+                    max-height: 256px;
                     width: 100%;
-                    height: auto;
+                    height: 100%;
+                    max-height: 256px;
+                    max-width: 256px;
                 }
 
-                h2{
-                    color: $white;
-                    font-size: 32px;
-                    font-weight: 800;
-                    user-select: none;
+                section{
+
+                    box-sizing: border-box;
+                    h2{
+                        color: $white;
+                        font-size: 2rem;
+                        font-weight: 800;
+                        // user-select: none;
+                        text-shadow: 0px 3px $shadow;
+                        padding-left: 30px;
+                    }
+
+                    p{
+                        color: $white;
+                        font-size: 1.3rem;
+                        font-weight: 300;
+                        text-shadow: 0px 1px $shadow;
+                        max-width: 640px;
+                        line-height: 22.4px;
+                        padding: 0px 10px 60px 30px;
+                        overflow-y: auto;
+                    }
                 }
+
+            }
+        }
+
+        .Achivements{
+            margin-top: 100px;
+            .AchievementsBar{
+
             }
         }
     }
-
-    // End Of Content
+    // End of Content
 }
 
