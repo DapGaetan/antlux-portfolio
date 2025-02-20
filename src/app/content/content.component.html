@@ -1,81 +1,59 @@
-<div class="main">
-    <nav class="NavLeft" [class.is-close]="isMenuClose">
-        <div class="NavAction" [class.is-close]="isMenuClose">
-            <h2 class="NavTitle" [class.is-close]="isMenuClose">Catégories</h2>
-            <button class="Burger" (click)="toggleMenu()">
-                <img [src]="isMenuClose ? 'assets/icon/menubars.svg' : 'assets/icon/menucross.svg'" alt="Ouvrir ou fermer le menu avec l'icone croix ou barre">
-              </button>          
-        </div>
-        <hr [class.is-close]="isMenuClose">
-        <ul class="NavItems" [class.is-close]="isMenuClose">
-            <li class="NavItem" [class.is-close]="isMenuClose"><a href="#" [class.is-close]="isMenuClose">À propos de moi</a></li>
-            <li class="NavItem" [class.is-close]="isMenuClose"><a href="#" [class.is-close]="isMenuClose">Mes réalisations</a></li>
-            <li class="NavItem" [class.is-close]="isMenuClose"><a href="#" [class.is-close]="isMenuClose">Mes compétences</a></li>
-            <li class="NavItem" [class.is-close]="isMenuClose"><a href="#" [class.is-close]="isMenuClose">Mon parcours</a></li>
-        </ul>
-    
-        <div class="NavLeftFooter" [class.is-close]="isMenuClose">
-    
-        </div>
-    </nav>
-        <div class="content" [class.is-close]="isMenuClose">
-            <h1><img src="assets/images/h1.svg" alt="Antoine Luciani (Antlux)"></h1>
-            <div class="AboutMe">
-                <div class="About">
-                    <img src="assets/images/profile/bigprofilepicture.png" alt="Photo de grande taille représentant Antoine luciani">
-                    <section>
-                        <h2>À propos de moi:</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi auctor et erat hendrerit vulputate.
-                            Mauris finibus suscipit sodales. Vestibulum  lacinia scelerisque ante finibus vehicula. Donec faucibus tellus nibh,
-                            ut imperdiet quam mollis non. Cras a consequat tellus. Nullam ligula  tortor, congue nec orci et, eleifend commodo mi.
-                            Quisque sit amet  ultrices tellus. Pellentesque placerat lectus in elit porta consequat.  Nulla ullamcorper malesuada dolor,
-                            et porttitor sapien dignissim  pulvinar. Donec orci ligula, rutrum et magna id, ullamcorper euismod  erat.
-                            Mauris ac vestibulum diam. Sed id enim sed justo interdum rhoncus.</p>
-                    </section>
-                </div>
-            </div>
-        
-            <div class="Achivements">
-                <div class="AchievementsBar">
-                    <h2>Mes réalisations</h2>
-                </div>
-                <section>
-        
-                </section>
-            </div>
-        
-            <div class="Skills">
-                <div class="SkillsBar">
-                    <h2>Mes compétences</h2>
-                </div>
-            
-                <div class="SkillsTree">
-                    <h3>Langages de programmation:</h3>
-                    <p>GDscript</p>
-                    <p>C#</p>
-                    <p>Rust</p>
-                </div>
-            
-                <div class="SkillsToolsBar">
-                    <h3>Outils maîtrisés:</h3>
-                    <section class="SkillsToolsBarTop">
-                        <img src="assets/tools/godot.svg" alt="">
-                        <img src="assets/tools/git.svg" alt="">
-                        <img src="assets/tools/blender.svg" alt="">
-                    </section>
-                    <section class="SkillsToolsBarDown">
-                        <img src="assets/tools/github.svg" alt="">
-                        <img src="assets/tools/office.svg" alt="">
-                        <img src="assets/tools/topsolid.svg" alt="">
-                    </section>
-                </div>
-            </div>
-        
-            <div class="Career">
-                <div class="CareerBar">
-                    <h2>Mon parcours</h2>
-                </div>
-            </div>
+<div class="content" [class.is-close]="isMenuClose">
+    <h1><img src="assets/images/h1.svg" alt="Antoine Luciani (Antlux)"></h1>
+    <div class="AboutMe">
+        <div class="About">
+            <img src="assets/images/profile/bigprofilepicture.png" alt="Photo de grande taille représentant Antoine luciani">
+            <section>
+                <h2>À propos de moi:</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi auctor et erat hendrerit vulputate.
+                    Mauris finibus suscipit sodales. Vestibulum  lacinia scelerisque ante finibus vehicula. Donec faucibus tellus nibh,
+                    ut imperdiet quam mollis non. Cras a consequat tellus. Nullam ligula  tortor, congue nec orci et, eleifend commodo mi.
+                    Quisque sit amet  ultrices tellus. Pellentesque placerat lectus in elit porta consequat.  Nulla ullamcorper malesuada dolor,
+                    et porttitor sapien dignissim  pulvinar. Donec orci ligula, rutrum et magna id, ullamcorper euismod  erat.
+                    Mauris ac vestibulum diam. Sed id enim sed justo interdum rhoncus.</p>
+            </section>
         </div>
     </div>
+
+    <div class="Achivements">
+        <div class="AchievementsBar">
+            <h2>Mes réalisations</h2>
+        </div>
+        <section>
+
+        </section>
+    </div>
+
+    <div class="Skills">
+        <div class="SkillsBar">
+            <h2>Mes compétences</h2>
+        </div>
     
+        <div class="SkillsTree">
+            <h3>Langages de programmation:</h3>
+            <p>GDscript</p>
+            <p>C#</p>
+            <p>Rust</p>
+        </div>
+    
+        <div class="SkillsToolsBar">
+            <h3>Outils maîtrisés:</h3>
+            <section class="SkillsToolsBarTop">
+                <img src="assets/tools/godot.svg" alt="">
+                <img src="assets/tools/git.svg" alt="">
+                <img src="assets/tools/blender.svg" alt="">
+            </section>
+            <section class="SkillsToolsBarDown">
+                <img src="assets/tools/github.svg" alt="">
+                <img src="assets/tools/office.svg" alt="">
+                <img src="assets/tools/topsolid.svg" alt="">
+            </section>
+        </div>
+    </div>
+
+    <div class="Career">
+        <div class="CareerBar">
+            <h2>Mon parcours</h2>
+        </div>
+    </div>
+</div>

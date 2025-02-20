@@ -1,0 +1,217 @@
+// Variables
+$primary-color: #C9A7D0;
+$secondary-color: #AC86B4;
+$white: #F5F5F5;
+$shadow: #00000040;
+
+// NavTop
+.NavTop {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 50px;
+    background-color: $primary-color;
+    box-shadow: 5px 5px $secondary-color;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+
+    .NavAction {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top-right-radius: 15px;
+        padding: 0 15px;
+
+        &.is-close {
+            padding: 0 15px;
+        }
+        .NavTitle {
+            font-size: clamp(1rem, 1.5vw, 1.5rem);
+            font-weight: 800;
+            color: $white;
+            text-shadow: 0px 3px $shadow;
+            flex-grow: 1;
+            text-align: center;
+            transition: opacity 0.3s ease-in-out;
+            padding-right: 40px;
+            padding-left: 30px;
+            border-top-right-radius: 15px;
+    
+            &.is-close {
+                transform: translateX(-100%);
+                display: none;
+                pointer-events: none;
+            }
+        }
+        .Burger {
+            border: none;
+            background: none;
+            flex-shrink: 0;
+            padding-top: 5px;
+            border-top-right-radius: 15px;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+
+            img {
+                width: clamp(24px, 2vw, 28px);
+                height: clamp(24px, 2vw, 28px);
+            }
+        }
+    }
+
+    .NavItems {
+        display: flex;
+        list-style: none;
+        margin-left: 55px;
+        transition: margin-left 0s ease-in-out;
+
+
+        &.is-close {
+             margin-left: 80px;
+            transition: margin-left 1s ease-in-out;
+        }
+
+        .Circle{
+            width: clamp(80px, 100px, 100px);
+            height: 100px;
+            top: 0px;
+            border-radius: 100%;
+            box-shadow: 0px 5px $secondary-color;
+            background: $primary-color;
+            margin-top: 55px;
+        }
+
+        .NavItem {
+            padding-left: 10px;
+            
+        margin-top: 120px;
+
+            img {
+                filter: drop-shadow(0px 4px 0px $primary-color);
+                transition: filter 0.2s ease, transform 0.2s ease;
+            }
+
+            &:hover img {
+                filter: drop-shadow(0px 8px 0px $primary-color);
+                transform: translateY(-5%);
+            }
+
+            &:active img {
+                filter: drop-shadow(0px 4px 0px $secondary-color);
+                transform: translateY(5%);
+            }
+        }
+    }
+}
+
+// Sidebar
+.NavLeft {
+    justify-content: space-between;
+    align-items: stretch;
+    width: clamp(240px, 15vw, 240px);
+    padding-top: 5px;
+    transition: width 0s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    top: 50px;
+    left: 0;
+    height: 100vh;
+    background-color: $primary-color;
+    box-shadow: 4px 10px 5px $shadow;
+    z-index: 1000;
+    flex-shrink: 0;
+    
+
+    .NavLeft::after {
+        width: 60px;
+        transition: width 0.3s ease-in-out;
+    }
+    &.is-close {
+        width: 60px;
+        transition: width 0s ease-in-out;
+    }
+    hr {
+        margin: auto;
+        width: 95%;
+        border-top: 1px solid $white;
+
+        &.is-close {
+            width: 5%;
+
+        }
+    }
+    .NavItems {
+        flex-grow: 1;
+        padding-left: 5px;
+        padding-top: 5px;
+        list-style: none;
+        overflow: hidden;
+        transition: transform 0.4s cubic-bezier(0.68, -0.55, 0.27, 1.55), opacity 0.3s ease-in-out;
+    
+        &.is-close {
+            transform: translateX(-100%);
+            opacity: 0;
+            pointer-events: none;
+        }
+    }
+
+    .NavItem {
+        a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            background-image: url('../../assets/textures/libg.svg');
+            background-repeat: no-repeat;
+            background-size: 187px;
+            background-position: left;
+            color: $secondary-color;
+            text-decoration: none;
+            font-size: clamp(0.8rem, 0.8vw, 1rem);
+            font-weight: 700;
+            padding: 16px;
+            transition: width 0.3s ease-in-out;
+            user-select: none;
+
+            &:hover {
+                filter: drop-shadow(0px 6px 0px $secondary-color);
+                transform: translateY(-5%);
+            }
+
+            &:active{
+                color: $primary-color;
+                filter: drop-shadow(0px 3px 0px $secondary-color);
+                transform: translateY(5%);
+            }
+    
+            &.is-close {
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0s ease-in-out, visibility 0s linear 0.3s;
+            }
+        }
+    }
+
+    .NavLeftFooter {
+        height: 298px;
+        background-image: url('../../assets/textures/menufooter.svg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        transition: width 0.3s ease-in-out;
+    
+        .NavLeftFooter::after {
+            width: 60px;
+            transition: width 0.3s ease-in-out;
+        }            
+
+        &.is-close {
+            width: 100%;
+            transition: width 0.3s ease-in-out;
+        }
+    }
+}
+

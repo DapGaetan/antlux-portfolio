@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 import { MenuService } from '../services/menu.service';
-import { FooterComponent } from '../footer/footer.component';
 
 @Component({
   selector: 'app-content',
-  imports: [FooterComponent],
+  imports: [],
   templateUrl: './content.component.html',
   styleUrl: './content.component.scss'
 })

@@ -1,0 +1,34 @@
+<nav class="NavTop">
+    <div class="NavAction" [class.is-close]="isMenuClose">
+        <h2 class="NavTitle" [class.is-close]="isMenuClose">Catégories</h2>
+        <button class="Burger" (click)="toggleMenu()">
+            <img [src]="isMenuClose ? 'assets/icon/menubars.svg' : 'assets/icon/menucross.svg'" alt="Ouvrir ou fermer le menu avec l'icone croix ou barre">
+          </button>          
+    </div>
+ 
+
+    <ul class="NavItems">
+        <li class="Circle">
+            <img src="assets/images/profile/littleprofilepicture.svg" 
+                 alt="Photo de profil d'Antoine Luciani" class="ProfilePicture">
+        </li>
+        <li class="NavItem" [class.is-close]="isMenuClose"><a href="#" [class.is-close]="isMenuClose"><img src="assets/icon/github.svg" alt="Icone de réseaux sociale professionnel : GitHub"></a></li>
+        <li class="NavItem" [class.is-close]="isMenuClose"><a href="#" [class.is-close]="isMenuClose"><img src="assets/icon/twitter.svg" alt="Icone de réseaux sociale : X (Anciennement Twitter)"></a></li>
+        <li class="NavItem" [class.is-close]="isMenuClose"><a href="#" [class.is-close]="isMenuClose"><img src="assets/icon/linkedin.svg" alt="Icone de réseaux sociale professionnel : Linkedin"></a></li>
+        <li class="NavItem" [class.is-close]="isMenuClose"><a href="#" [class.is-close]="isMenuClose"><img src="assets/icon/itchio.svg" alt="Icone de réseaux sociale professionnel : ItchIO"></a></li>
+    </ul>
+</nav>
+
+<!-- Sidebar Left -->
+<nav class="NavLeft" [class.is-close]="isMenuClose">
+    <hr>
+    <ul class="NavItems" [class.is-close]="isMenuClose">
+        <li class="NavItem" [class.is-close]="isMenuClose"><a href="#" [class.is-close]="isMenuClose">À propos de moi</a></li>
+        <li class="NavItem" [class.is-close]="isMenuClose"><a href="#" [class.is-close]="isMenuClose">Mes réalisations</a></li>
+        <li class="NavItem" [class.is-close]="isMenuClose"><a href="#" [class.is-close]="isMenuClose">Mes compétences</a></li>
+        <li class="NavItem" [class.is-close]="isMenuClose"><a href="#" [class.is-close]="isMenuClose">Mon parcours</a></li>
+    </ul>
+
+    <div class="NavLeftFooter"></div>
+</nav>
+
