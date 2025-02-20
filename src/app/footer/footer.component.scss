@@ -1,5 +1,4 @@
 footer{
-    position: fixed;
 
     margin: 0;
     padding: 0;
@@ -11,6 +10,6 @@ footer{
 
     background: url("../../assets/textures/footer.svg");
     background-size: 100%;
-    background-position: center;
+    background-position: cover;
     background-repeat: no-repeat;
 }

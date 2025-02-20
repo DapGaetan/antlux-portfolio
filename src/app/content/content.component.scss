@@ -4,68 +4,150 @@ $secondary-color: #AC86B4;
 $white: #F5F5F5;
 $shadow: #00000040;
 $sa-st-background: #297D83;
-    .content {
-        margin: 0;
-        padding: 0;
-        background-image: url('../../assets/background.gif');
-        h1{
+.main{
+    margin-top: 80px;
 
-        }
+    &.is-close{
+        width: 60px;
+        transition: width 0s ease-in-out;
+    }
+        .content {
+            &.is-close{
+                width: 60px;
+                transition: width 0s ease-in-out;
+            }
+            h1{
+                margin-left: 100px;
+            }
 
-        .AboutMe{
-            margin: 0;
-            max-width: fit-content;
-            max-height: fit-content;
-            background-color: $primary-color;
-            border-top-right-radius: 255px;
-            border-bottom-right-radius: 255px;
-            box-shadow: 0px 8px $secondary-color;
-            padding: 40px;
-            .About{
-                display: flex;
-                flex-direction: row;
+            .AboutMe{
+                margin: 0;
+                max-width: fit-content;
+                max-height: fit-content;
+                background-color: $primary-color;
+                border-top-right-radius: 255px;
+                border-bottom-right-radius: 255px;
+                box-shadow: 0px 8px $secondary-color;
+                padding: 40px 40px 40px 100px;
+                .About{
+                    display: flex;
+                    flex-direction: row;
 
-                img {
-                    max-width: 256px;
-                    max-height: 256px;
-                    width: 100%;
-                    height: 100%;
-                    max-height: 256px;
-                    max-width: 256px;
+                    img {
+                        max-width: 256px;
+                        max-height: 256px;
+                        width: 100%;
+                        height: 100%;
+                        max-height: 256px;
+                        max-width: 256px;
+                    }
+
+                    section{
+
+                        box-sizing: border-box;
+                        h2{
+                            color: $white;
+                            font-size: 2rem;
+                            font-weight: 800;
+                            // user-select: none;
+                            text-shadow: 0px 3px $shadow;
+                            padding-left: 30px;
+                        }
+
+                        p{
+                            color: $white;
+                            font-size: 1.3rem;
+                            font-weight: 300;
+                            text-shadow: 0px 1px $shadow;
+                            max-width: 640px;
+                            line-height: 22.4px;
+                            padding: 0px 10px 60px 30px;
+                            overflow-y: auto;
+                        }
+                    }
+
                 }
+            }
+
+            .Achivements{
 
                 section{
-
                     box-sizing: border-box;
+                    max-width: fit-content;
+                    max-height: fit-content;
                     h2{
+                        display: block;
+                        width: 70%;
+                        height: auto;
+                        background-image: url('../../assets/textures/purplecloud.svg');
+                        background-repeat: no-repeat;
+                        background-size: 100%;
+                        filter: drop-shadow(0px 6px 0px $secondary-color);
+                        background-position: left;
                         color: $white;
-                        font-size: 2rem;
+                        font-size: 2.5rem;
                         font-weight: 800;
-                        // user-select: none;
                         text-shadow: 0px 3px $shadow;
-                        padding-left: 30px;
-                    }
-
-                    p{
-                        color: $white;
-                        font-size: 1.3rem;
-                        font-weight: 300;
-                        text-shadow: 0px 1px $shadow;
-                        max-width: 640px;
-                        line-height: 22.4px;
-                        padding: 0px 10px 60px 30px;
-                        overflow-y: auto;
+                        font-weight: 700;
+                        padding: 150px;
+                        padding-left: 250px;
+                        user-select: none;
                     }
                 }
+        }
 
+        .Skills{
+
+            section{
+                box-sizing: border-box;
+                max-width: fit-content;
+                max-height: fit-content;
+                h2{
+                    display: block;
+                    width: 70%;
+                    height: auto;
+                    background-image: url('../../assets/textures/purplecloud.svg');
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    filter: drop-shadow(0px 6px 0px $secondary-color);
+                    background-position: left;
+                    color: $white;
+                    font-size: 2.5rem;
+                    font-weight: 800;
+                    text-shadow: 0px 3px $shadow;
+                    font-weight: 700;
+                    padding: 150px;
+                    padding-left: 250px;
+                    user-select: none;
+                }
             }
         }
 
-        .Achivements{
-            margin-top: 100px;
-            .AchievementsBar{
+        .Career{
 
+            section{
+                box-sizing: border-box;
+                max-width: fit-content;
+                max-height: fit-content;
+                h2{
+                    display: block;
+                    width: 70%;
+                    height: auto;
+                    background-image: url('../../assets/textures/purplecloud.svg');
+                    background-repeat: no-repeat;
+                    background-size: 100%;
+                    filter: drop-shadow(0px 6px 0px $secondary-color);
+                    background-position: left;
+                    color: $white;
+                    font-size: 2.5rem;
+                    font-weight: 800;
+                    text-shadow: 0px 3px $shadow;
+                    font-weight: 700;
+                    padding: 150px;
+                    padding-left: 250px;
+                    user-select: none;
+                }
             }
         }
     }
-    // End of Content
+}
