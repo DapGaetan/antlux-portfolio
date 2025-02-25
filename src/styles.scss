@@ -10,6 +10,15 @@ $sa-st-background: #297D83;
     margin: 0;
 }
 
+html, body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
 body{
     font-family: "League Spartan", serif;
     padding: 0;

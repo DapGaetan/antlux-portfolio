@@ -1,13 +1,12 @@
 import { MenuComponent } from './../../menu/menu.component';
 import { Component } from '@angular/core';
 import { ContentComponent } from '../../content/content.component';
-import { FooterComponent } from '../../footer/footer.component';
 import { MenuService } from '../../services/menu.service';
 
 
 @Component({
   selector: 'app-home-page',
-  imports: [MenuComponent, ContentComponent, FooterComponent],
+  imports: [MenuComponent, ContentComponent],
   templateUrl: './home-page.component.html',
   styleUrl: './home-page.component.scss'
 })
