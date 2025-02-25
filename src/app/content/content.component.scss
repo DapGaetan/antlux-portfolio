@@ -20,6 +20,14 @@ $sa-st-background: #297D83;
             }
             h1{
                 margin-left: 100px;
+                margin-bottom: 20px;
+
+                @media (max-width: 768px){
+                    margin-bottom: 0px;
+                    img{
+                        width: clamp(260px, 10vw, 500px);
+                    }
+                }
             }
 
             .AboutMe {
@@ -39,8 +47,7 @@ $sa-st-background: #297D83;
                     justify-content: flex-start;
             
                     img {
-                        max-width: 256px;
-                        max-height: 256px;
+                        width: clamp(80px, 10vw, 256px);
                         width: 100%;
                         height: 100%;
                         max-height: 256px;
@@ -72,7 +79,7 @@ $sa-st-background: #297D83;
                     }
                 }
             
-                // Pour les écrans jusqu'à 768px (tablettes et petits écrans)
+                // max 768px
                 @media (max-width: 768px) {
                     .AboutMe {
                         margin-right: 50px;
@@ -85,10 +92,10 @@ $sa-st-background: #297D83;
                     }
             
                     img {
-                        max-width: 100px;
+                        max-width: 80px;
                         max-height: 100px;
                         margin-right: 0; 
-                        margin-bottom: 20px; // Espacement sous l'image
+                        margin-bottom: 20px;
                         padding: 10px;
                     }
             
@@ -106,10 +113,10 @@ $sa-st-background: #297D83;
                     }
                 }
             
-                // Pour les très petits écrans (480px et moins)
+                // (480px et moins)
                 @media (max-width: 480px) {
                     .About {
-                        padding: 10px; // Réduire les espacements pour les très petits écrans
+                        padding: 10px;
                     }
             
                     img {
@@ -199,7 +206,20 @@ $sa-st-background: #297D83;
             }
 
             .SkillsTree{
+                width: 100%;
+                background-color: $primary-color;
+                border-bottom: 8px solid $secondary-color;
+                padding: 20px 0;
+                margin-bottom: 40px;
 
+                h3 {
+                    font-size: 1.8rem;
+                    margin-bottom: 10px;
+                    text-shadow: 0px 3px $shadow;
+                    color: white;
+                    margin-left: 150px;
+                    margin-bottom: 25px;
+                }
             }
 
             .SkillsToolsBar {
@@ -219,7 +239,7 @@ $sa-st-background: #297D83;
             
                 .SkillsToolsBarContainer {
                     display: grid;
-                    grid-template-columns: repeat(3, auto);  // 3 colonnes par défaut
+                    grid-template-columns: repeat(3, auto);
                     gap: 5px;
                     justify-content: center;
                     margin-left: 100px;
@@ -229,7 +249,7 @@ $sa-st-background: #297D83;
                         height: auto;
                         filter: drop-shadow(0px 5px 0px $secondary-color);
                         transition: filter 0.1s ease, transform 0.2s ease;
-                        display: block;  // S'assurer que l'image est un bloc (pas d'espaces blancs)
+                        display: block;
             
                         &:hover {
                             filter: drop-shadow(0px 9px 0px $secondary-color);
@@ -243,7 +263,7 @@ $sa-st-background: #297D83;
                     }
             
                     img:nth-child(n + 4) { 
-                        margin-left: 50px;  // Décalage pour la 2ème ligne
+                        margin-left: 50px;
                     }
                 }
             
@@ -255,13 +275,13 @@ $sa-st-background: #297D83;
                     }
             
                     .SkillsToolsBarContainer {
-                        grid-template-columns: repeat(2, 1fr);  // 2 colonnes sur petit écran
-                        margin-left: 100px;  // Supprime le décalage à gauche
-                        gap: 10px;  // Augmente l'espacement entre les images
+                        grid-template-columns: repeat(2, 1fr);
+                        margin-left: 100px;
+                        gap: 10px;
             
                         img {
                             width: clamp(120px, 5vw, 100px);
-                            filter: none;  // Supprime le filtre sur mobile
+                            filter: none;
             
                             &:hover {
                                 filter: none;
@@ -275,7 +295,7 @@ $sa-st-background: #297D83;
                         }
             
                         img:nth-child(n + 4) {
-                            margin-left: 0;  // Enlève tout décalage
+                            margin-left: 0;
                         }
                     }
                 }
