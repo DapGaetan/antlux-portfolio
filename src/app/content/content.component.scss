@@ -170,6 +170,48 @@ $sa-st-background: #297D83;
                     }
                     
                 }
+
+                .achiv-gallery {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    gap: 40px;
+                    padding: 0px;
+                    margin: 0;
+                
+                    a {
+                        display: block;
+                    }
+                
+                    img {
+                        width: clamp(180px, 20vw, 380px);
+                        height: auto;
+                        border-radius: 10px;
+                        transition: transform 0.2s ease, box-shadow 0.2s ease;
+                        
+                        &:hover {
+                            transform: scale(1.05);
+                        }
+                    }
+                
+                    @media (max-width: 768px) {
+                        gap: 15px;
+                
+                        img {
+                            width: clamp(100px, 30vw, 200px);
+                        }
+                    }
+                
+                    @media (max-width: 480px) {
+                        flex-direction: column;
+                        align-items: center;
+                
+                        img {
+                            width: 80%;
+                        }
+                    }
+                }
+                
             }
             
 
@@ -220,7 +262,7 @@ $sa-st-background: #297D83;
                     margin-bottom: 10px;
                     text-shadow: 0px 3px $shadow;
                     color: white;
-                    margin-left: 150px;
+                    margin-left: 20%;
                     margin-bottom: 25px;
                     align-self: flex-start;
                     font-weight: 800;
