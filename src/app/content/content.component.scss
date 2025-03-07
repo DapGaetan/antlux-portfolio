@@ -288,22 +288,33 @@ $sa-st-background: #297D83;
                         height: 20px;
                         border-radius: 10px;
                         -webkit-appearance: none;
-            
+                        appearance: none;
+                        position: relative;
+                        overflow: hidden;
+                        box-shadow: inset 0px 2px 5px rgba(255, 255, 255, 0.3), 
+                                    inset 0px -2px 2px rgba(255, 255, 255, 0.2);
+                    
                         &::-webkit-progress-bar {
-                            background-color: $secondary-color;
+                            background: linear-gradient(to bottom, darken($secondary-color, 10%) 0%, $secondary-color 100%);
                             border-radius: 10px;
+                            box-shadow: inset 0px 3px 6px rgba(0, 0, 0, 0.116);
                         }
-            
+                    
                         &::-webkit-progress-value {
-                            background-color: $white;
+                            background: linear-gradient(to bottom right, lighten($white, 10%) 0%, darken($white, 20%) 100%);
                             border-radius: 10px;
+                            box-shadow: inset -2px -2px 5px rgba(0, 0, 0, 0.384),
+                                        inset 2px 2px 5px rgb(255, 255, 255);
                         }
-            
+                    
                         &::-moz-progress-bar {
-                            background-color: $secondary-color;
+                            background: linear-gradient(to bottom right, lighten($white, 10%) 0%, darken($white, 20%) 100%);
                             border-radius: 10px;
+                            box-shadow: inset -2px -2px 5px rgba(0, 0, 0, 0.4), 
+                                        inset 2px 2px 5px rgba(255, 255, 255, 0.2);
                         }
                     }
+                    
                 }
             
                 @media (max-width: 600px) {
