@@ -7,7 +7,7 @@ import { MenuService } from '../services/menu.service';
   styleUrls: ['./menu.component.scss']
 })
 export class MenuComponent {
-  isMenuClose = false;
+  isMenuClose = true;  // Le menu est fermé par défaut
 
   constructor(private menuService: MenuService) {
     this.menuService.isMenuClose$.subscribe(state => {
@@ -16,6 +16,7 @@ export class MenuComponent {
   }
 
   toggleMenu() {
-    this.isMenuClose = !this.isMenuClose;
+    this.menuService.toggleMenu(); // Toggle via le service
   }
 }
+

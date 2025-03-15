@@ -7,7 +7,7 @@ $sa-st-background: #297D83;
 
 
 .main{
-    margin-top: 130px;
+    margin-top: 80px;
 
     &.is-close{
         width: 60px;
@@ -28,7 +28,7 @@ $sa-st-background: #297D83;
                 -webkit-text-stroke-width: 4px;
                 -webkit-text-stroke-color: $secondary-color;
                 paint-order: stroke fill;
-                text-shadow: 1px 1px 0px $secondary-color; // Ombre très collée
+                text-shadow: 1px 1px 0px $secondary-color;
 
                 
                 
@@ -49,16 +49,23 @@ $sa-st-background: #297D83;
                 border-top-right-radius: 255px;
                 border-bottom-right-radius: 255px;
                 box-shadow: 0px 8px $secondary-color;
-                padding: 40px 40px 40px 100px;
+                padding: 40px 40px 40px 200px;
+                margin-left: 3%;
+                @media (max-width: 768px) {
+                    padding: 40px 40px 40px 100px;
+                    margin-left: 0%;
+                }
             
                 .About {
                     display: flex;
                     flex-direction: row;
                     flex-wrap: wrap;
                     justify-content: flex-start;
+                    height: fit-content;
             
                     img {
                         width: 256px;
+                        height: 256px; 
                         margin-right: 30px;
                     }
             
@@ -85,11 +92,8 @@ $sa-st-background: #297D83;
                         }
                     }
                 }
-
-                @media (max-width: 1125px) {
-
-                    
-                }
+            
+            
             
                 // max 768px
                 @media (max-width: 768px) {
@@ -104,8 +108,8 @@ $sa-st-background: #297D83;
                     }
             
                     img {
-                        max-width: 80px;
-                        max-height: 100px;
+                        max-width: 200px;
+                        max-height: 200px;
                         margin-right: 0;
                         margin-bottom: 20px;
                         padding: 10px;
@@ -482,7 +486,7 @@ $sa-st-background: #297D83;
                 align-items: center;
                 text-align: center;
                 position: relative;
-                width: 80%;
+                width: 90%;
             
                 h2 {
                     position: relative;
@@ -491,7 +495,7 @@ $sa-st-background: #297D83;
                     font-size: clamp(1.3rem, 1.8vw, 2.8rem);
                     font-weight: 800;
                     text-shadow: 0px 3px $shadow;
-                    padding: 10vh 15vw;
+                    padding: 10vh 17vw;
                     z-index: 1;
             
                     @media (max-width: 768px){
@@ -522,13 +526,13 @@ $sa-st-background: #297D83;
                 padding: 0;
 
                 img{
-                    width: clamp(580px, 45vw, 880px);
+                    width: 80%;
                 }
 
                 @media (max-width: 750px) {
                     img {
                         content: url("../../assets/images/careerMobile.png");
-                        width: 60vw;
+                        width: 65%;
                         margin-left: 15%;
                     }
                 }
@@ -537,10 +541,3 @@ $sa-st-background: #297D83;
         }
     }
 }
-// footer {
-//     margin-top: auto;
-//     width: 100%;
-//     text-align: center;
-//     padding: 15px 0;
-//     height: fit-content;
-// }

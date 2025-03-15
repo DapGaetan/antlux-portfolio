@@ -5,7 +5,7 @@ import { BehaviorSubject } from 'rxjs';
   providedIn: 'root'
 })
 export class MenuService {
-  private isMenuCloseSubject = new BehaviorSubject<boolean>(false);
+  private isMenuCloseSubject = new BehaviorSubject<boolean>(true); // Menu fermé par défaut
   isMenuClose$ = this.isMenuCloseSubject.asObservable();
 
   toggleMenu(): void {
